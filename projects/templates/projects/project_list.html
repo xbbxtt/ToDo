@@ -24,11 +24,13 @@
             <tbody>
                 {% for project in project_list %}
                 <tr>
-                    <td>{{project.name}}</td>
-                    <td></td>
+                    <td>
+                        <a href="{% url 'show_project' project.id %}">
+                            {{project.name}}
+                        </a>
+                    </td>
+                    <td>{{project.tasks.all|length}}</td>
                 </tr>
-                {% empty %}
-                You are not assigned to any projects!
                 {% endfor %}
             </tbody>
         </table>
