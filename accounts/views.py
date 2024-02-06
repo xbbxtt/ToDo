@@ -22,7 +22,7 @@ def user_login(request):
     else:
         form = LoginForm()
     context = {
-        "form" : form,
+        "form": form,
     }
     return render(request, "accounts/login.html", context)
 
@@ -49,6 +49,6 @@ def user_signup(request):
     else:
         form = SignUpForm()
     context = {
-        "form" : form,
+        "form": form,
     }
     return render(request, "accounts/signup.html", context)
